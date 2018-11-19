@@ -1,0 +1,76 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=GBK">
+<title>欢迎你！by冯知帅</title>
+<meta name="baidu-site-verification" content="tl7e9mmjFe">
+<link rel="shortcut icon" href="style/fzs.ico" type="image/x-icon">
+<link href="style/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="font/iconfont.css">
+<script src="style/jquery.min.js" type="text/javascript"></script>
+</head>
+<body style="margin: 0px; padding: 0px; background: #181D23;">
+<style type="text/css">
+video::-webkit-media-controls-enclosure {
+	display: none !important;
+}
+html, body {
+	overflow-x: hidden;
+	overflow-y: hidden;
+	font-family: 微软雅黑;
+}
+div {
+	position: fixed;
+	z-index: 99999;
+}
+.btn {
+	background: rgba(0, 0, 0, 0.22);
+	color: #FFF;
+	padding: 12px;
+	margin-right: 10px;
+	transition: 0.5s;
+	border-radius: 5px;
+	cursor: pointer;
+}
+.btn:hover {
+	background: #1d7eb8;
+	box-shadow: 0 0 20px #1d7eb8;
+}
+</style>
+	<div style="background: rgba(0, 0, 0, 0.01); width: 100%; height: 100%; position: fixed; z-index: 1; " oncontextmenu="return false;"></div>
+	<a class="btn" style="position: fixed; z-index: 9999; right: 85px; margin-top: 8px; text-decoration: none;" href="http://www.fengzhishuai.com" clickid="guanwang_navigation_yangtai">另一个世界</a>
+	<a class="btn" style="position: fixed; z-index: 9999; right: 0px; margin-top: 8px; text-decoration: none;" href="http://wpa.qq.com/msgrd?v=3&uin=171772419&site=qq&menu=yes" target="_blank" clickid="guanwang_navigation_yangtai">官方QQ</a>
+	<a class="btn"
+		style="position: fixed; z-index: 9999; left: 0px; margin-top: 5px;"
+		onclick="play($(this))"><i style="font-size: 22px;" class="iconfont icon-zanting"></i>
+	</a>
+<!-- 	<center> -->
+<!-- 		<img src="http://www.srmc75.com/css/newhomelogo.png" style="position: fixed; margin-left: -360px; margin-top: 280px;"> -->
+<!-- 	</center> -->
+	<video id="myVideo" 
+		src="http://hd.yinyuetai.com/uploads/videos/common/887301419C79F47159849BBBC8F84BC9.flv?sc=a1a0ba15a21007f3&amp;br=1098&amp;vid=782287&amp;aid=15655&amp;area=Other&amp;vst=3"
+		controls="controls" width="100%" autoplay="true" loop="loop">
+	</video>
+<script>
+	setsize();
+	window.onresize = function(){
+		setsize();
+	}
+	function setsize(){
+		var w=$(window).width();
+		var h=$(window).height();
+		$("#buttonDiv").css("top",20);
+		$("#buttonDiv").css("left",w/2-100);
+	}
+	function play(thisobj){
+		var obj=document.getElementById("myVideo");
+		if(obj.paused){
+			obj.play();
+			thisobj.find("i").attr("class","iconfont icon-zanting");
+		}else{
+			obj.pause();
+			thisobj.find("i").attr("class","iconfont icon-kaishi");
+		}
+	}
+</script>
+</body>
+</html>
